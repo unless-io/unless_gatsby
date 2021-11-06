@@ -1,0 +1,66 @@
+.header-wrapper {
+  position: sticky;
+  width: 100vw;
+  top: calc(100vh - 160px);
+  background-color: #ffeddf;
+  padding-bottom: 50px;
+}
+
+.header-wrapper header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 30px;
+  max-width: 960px;
+  padding: 0 1.0875rem 1.45rem;
+}
+
+.header-wrapper header svg {
+  width: 170px;
+}
+
+.contact-button {
+  background-color: #d8d8d8;
+  display: flex;
+  color: black;
+  text-decoration: none;
+  padding: 20px 30px;
+  justify-content: space-between;
+  min-width: 150px;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0px 0px 3px rgba(1, 1, 1, 0.5);
+  transition: box-shadow 400ms ease, transform 400ms ease;
+}
+
+.contact-button:active {
+  box-shadow: inset 0px 0px 3px rgba(1,1,1,0.5);
+  transform: scale(0.99);
+}
+
+.header-wrapper header .left p {
+  font-weight: 600;
+}
+
+.header-wrapper header .right ol {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  gap: 10px;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.header-wrapper header .right ol > li {
+  list-style: none;
+  text-align: right;
+}
+
+.header-wrapper header .right ol > li a {
+  color: black;
+  font-size: 18px;
+}
+
+.header-wrapper header .right ol > li a.active {
+  font-weight: 600;
+}
