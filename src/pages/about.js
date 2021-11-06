@@ -19,14 +19,7 @@ const IndexPage = () => {
         }}
       >
         <h1>About</h1>
-        <figure
-          style={{
-            float: `right`,
-            marginLeft: `60px`,
-            marginBottom: `40px`,
-            marginTop: `0`,
-          }}
-        >
+        <figure className="side-image">
           <StaticImage
             src="../images/lars.jpg"
             quality={95}
@@ -37,8 +30,6 @@ const IndexPage = () => {
             style={{
               borderRadius: `5px`,
               boxShadow: `2px 1px 3px rgba(1,1,1,0.2)`,
-              animationDuration: `400ms`,
-              animationFillMode: `forwards`,
             }}
           />
           <figcaption>
@@ -52,7 +43,7 @@ const IndexPage = () => {
                 boxSizing: `border-box`,
                 marginTop: `5px`,
                 color: `var(--link)`,
-                transition: `color 400ms ease`
+                transition: `color 400ms ease`,
               }}
             >
               lars@unless.io
@@ -73,9 +64,9 @@ const IndexPage = () => {
           development, growth marketing and animation.
         </p>
         <p>
-          Unless has participated in teaching over 400 students in topics
+          Unless has participated in teaching over <strong>400</strong> students in topics
           ranging from: beginner programming, frontend development, design and
-          growth marketing. We've coached 100+ projects and started dozens
+          growth marketing. We've coached <strong>100+</strong> projects and started dozens
           ourselves and with clients.
         </p>
         <p>

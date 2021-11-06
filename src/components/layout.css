@@ -30,6 +30,20 @@ body {
   transition: color 400ms ease, background-color 400ms ease;
 }
 
+.layout {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1.0875rem 1.45rem;
+  padding-top: 125px;
+  position: relative;
+}
+
+@media (max-width: 920px) {
+  .layout {
+    padding-top: 75px;
+  }
+}
+
 @keyframes slideIn {
   0% {
     transform: translateY(-10px);
@@ -43,4 +57,22 @@ body {
 
 .slideIn {
   animation-name: slideIn;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideInVisible {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.slideInVisible {
+  transform: translateY(-10px);
+  animation-name: slideInVisible;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
 }

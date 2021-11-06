@@ -16,15 +16,12 @@ const IndexPage = () => {
         quality={95}
         formats={["auto", "webp", "avif"]}
         alt="Hands at a desk working on a computer"
-        className={isMounted ? "slideIn" : ""}
+        className={isMounted ? "slideIn banner" : "banner"}
         style={{
           marginBottom: `1.45rem`,
           height: `calc(100vh - 290px)`,
-          maxHeight: `500px`,
           width: `100%`,
           opacity: `0`,
-          animationDuration: `400ms`,
-          animationFillMode: `forwards`,
         }}
       />
     </Layout>
