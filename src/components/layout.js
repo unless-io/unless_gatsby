@@ -44,10 +44,10 @@ const Layout = ({ children }) => {
             event.preventDefault()
             if (themeMode == "light") {
               setThemeMode("dark")
-              localStorage.setItem("themeMode", "dark")
+              localStorage.setItem("theme", "dark")
             } else {
               setThemeMode("light")
-              localStorage.setItem("themeMode", "light")
+              localStorage.setItem("theme", "light")
             }
           }}
           className="theme-button"

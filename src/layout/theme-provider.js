@@ -11,7 +11,7 @@ const ThemeProvider = props => {
   const clientSchemePreference = (
     window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     )
-  const localStorageTheme = localStorage.getItem('themeMode');
+  const localStorageTheme = localStorage.getItem('theme');
   const themePresent = localStorageTheme || clientSchemePreference
   const [themeMode, setThemeMode] = React.useState(themePresent)
   const value = { themeMode, setThemeMode }
