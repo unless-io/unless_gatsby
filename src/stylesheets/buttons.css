@@ -1,0 +1,9 @@
+.theme-button {
+  color: #b98282;
+  opacity: 0.5;
+  transition: opacity 400ms ease;
+}
+
+.theme-button:hover {
+  opacity: 1;
+}

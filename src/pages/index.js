@@ -22,7 +22,6 @@ const IndexPage = () => {
           height: `calc(100vh - 290px)`,
           maxHeight: `500px`,
           width: `100%`,
-          marginTop: `150px`,
           opacity: `0`,
           animationDuration: `400ms`,
           animationFillMode: `forwards`,

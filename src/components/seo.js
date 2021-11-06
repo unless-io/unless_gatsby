@@ -10,7 +10,11 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+import { useContext } from "react"
+import { ThemeContext } from "../layout/theme-provider.js"
+
 function Seo({ description, lang, meta, title }) {
+  const { themeMode, setThemeMode } = useContext(ThemeContext)
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -30,6 +34,9 @@ function Seo({ description, lang, meta, title }) {
 
   return (
     <Helmet
+      bodyAttributes={{
+        class: themeMode,
+      }}
       htmlAttributes={{
         lang,
       }}

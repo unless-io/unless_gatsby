@@ -1,7 +1,33 @@
-body, html {
-  background-color: #FFEDDF;
+.light {
+  --background: #FFEDDF;
+  --foreground: black;
+  --link: blue;
+}
+
+.dark {
+  --background: #152741;
+  --foreground: white;
+  --link: #FFEDDF;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #152741;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #FFEDDF;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
+  transition: color 400ms ease, background-color 400ms ease;
 }
 
 @keyframes slideIn {

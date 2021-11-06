@@ -6,11 +6,13 @@
 
 .form-group input,
 .form-group textarea {
-  background-color: #fff4ec;
+  background-color: var(--background);
+  color: var(--foreground);
   border: 1px solid #b0b0b0;
   padding: 15px 10px;
   width: 100%;
   box-sizing: border-box;
+  transition: color 400ms ease, background-color 400ms ease;
 }
 
 .form-grid {

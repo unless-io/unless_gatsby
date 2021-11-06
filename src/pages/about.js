@@ -16,7 +16,6 @@ const IndexPage = () => {
           minHeight: `300px`,
           width: `100%`,
           maxWidth: `800px`,
-          marginTop: `150px`,
         }}
       >
         <h1>About</h1>
@@ -52,6 +51,8 @@ const IndexPage = () => {
                 textAlign: `center`,
                 boxSizing: `border-box`,
                 marginTop: `5px`,
+                color: `var(--link)`,
+                transition: `color 400ms ease`
               }}
             >
               lars@unless.io

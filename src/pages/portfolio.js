@@ -9,7 +9,6 @@ const IndexPage = () => (
       style={{
         marginBottom: `1.45rem`,
         width: `100%`,
-        marginTop: `150px`,
       }}
     >
       <h1>Portfolio</h1>

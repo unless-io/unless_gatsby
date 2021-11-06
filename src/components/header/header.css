@@ -2,7 +2,6 @@
   position: sticky;
   width: 100vw;
   top: calc(100vh - 160px);
-  background-color: #ffeddf;
   padding-bottom: 50px;
 }
 
@@ -42,6 +41,12 @@
   font-weight: 600;
 }
 
+.header-wrapper header .left a,
+.header-wrapper header .left a:visited {
+  color: var(--link);
+  transition: color 400ms ease;
+}
+
 .header-wrapper header .right ol {
   display: grid;
   grid-auto-columns: 1fr;
@@ -57,8 +62,9 @@
 }
 
 .header-wrapper header .right ol > li a {
-  color: black;
+  color: var(--foreground);
   font-size: 18px;
+  transition: color 400ms ease;
 }
 
 .header-wrapper header .right ol > li a.active {
