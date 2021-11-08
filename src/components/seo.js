@@ -14,7 +14,7 @@ import { useContext } from "react"
 import { ThemeContext } from "../layout/theme-provider.js"
 
 function Seo({ description, lang, meta, title }) {
-  const { themeMode, setThemeMode } = useContext(ThemeContext)
+  const { themeMode } = useContext(ThemeContext)
   const { site } = useStaticQuery(
     graphql`
       query {

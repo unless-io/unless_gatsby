@@ -1,0 +1,135 @@
+.image-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 280px;
+  grid-auto-flow: column;
+  gap: 30px;
+}
+
+.image-wrapper .content > p {
+  visibility: hidden;
+  color: #ffeddf;
+  height: 0px;
+  overflow: hidden;
+  margin: 0;
+  opacity: 0;
+  max-width: 600px;
+  margin: 20px 0;
+  text-align: left;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  transition: height 400ms ease, opacity 400ms ease;
+}
+
+.image-wrapper:after {
+  content: "";
+  background-color: transparent;
+  transition: background-color 400ms ease;
+}
+
+.image-wrapper.active:after {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(1, 1, 1, 0.8);
+  z-index: 5;
+}
+
+.image-wrapper.active .gatsby-image-wrapper,
+.image-wrapper.active .content {
+  z-index: 6;
+  position: relative;
+}
+
+.image-wrapper {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  max-width: 500px;
+  width: 100%;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.image-wrapper.active {
+  overflow: scroll;
+  width: 100vw;
+  left: 0;
+  max-width: 100vw;
+  top: 0;
+  position: fixed;
+  margin: 0 auto;
+  z-index: 999;
+  height: 100vh;
+}
+
+.image-wrapper.active .content > p,
+.image-wrapper.active .content > h2 {
+  visibility: visible;
+  opacity: 1;
+  height: fit-content;
+  margin: revert;
+}
+
+.image-wrapper .gatsby-image-wrapper {
+  border: 2px solid #979797;
+  transition: border 400ms ease;
+  max-width: 700px;
+}
+
+.image-wrapper.active .content .gatsby-image-wrapper {
+  border: none;
+  max-width: 800px;
+  width: 80vw;
+}
+
+.image-wrapper .content h2 {
+  color: #ffeddf;
+  text-align: left;
+  font-size: 30px;
+  visibility: hidden;
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  margin: 0;
+}
+
+.image-wrapper.active .content {
+  max-width: 960px;
+  padding: 0 1.0875rem 1.45rem;
+  margin: 50px auto;
+  animation-name: inOut;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes inOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 920px) {
+  .image-wrapper.active .content .gatsby-image-wrapper {
+    width: calc(100vw - (2 * 1.0875rem));
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    grid-auto-rows: min-content;
+  }
+}

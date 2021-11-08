@@ -22,3 +22,9 @@
   }
 }
 
+@media (max-width: 400px) {
+  .side-image {
+    float: inherit;
+    width: fit-content;
+  }
+}

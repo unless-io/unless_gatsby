@@ -1,5 +1,5 @@
 import * as React from "react"
-import useIsMounted from "../hooks/use-is-mounted"
+import useIsMounted from "../hooks/use_is_mounted"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { StaticImage } from "gatsby-plugin-image"
@@ -53,8 +53,7 @@ const IndexPage = () => {
         <p>
           Unless started in 2016 as a collaboration between Lars Böhm and
           Michéle de Bruyn, after working together as teachers at the coding
-          bootcamp Le Wagon. Mid-2018 Michéle left Unless and Lars continued
-          operating under the Unless brand.
+          bootcamp Le Wagon. 
         </p>
         <p>
           Teaching, coaching and participating in the coding community has
@@ -64,9 +63,9 @@ const IndexPage = () => {
           development, growth marketing and animation.
         </p>
         <p>
-          Unless has participated in teaching over <strong>400</strong> students in topics
+          Unless has participated in teaching over <strong className="shiny">400</strong> students in topics
           ranging from: beginner programming, frontend development, design and
-          growth marketing. We've coached <strong>100+</strong> projects and started dozens
+          growth marketing. We've coached <strong className="shiny">100+</strong> projects and started dozens
           ourselves and with clients.
         </p>
         <p>

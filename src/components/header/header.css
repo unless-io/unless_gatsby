@@ -70,3 +70,15 @@
 .header-wrapper header .right ol > li a.active {
   font-weight: 600;
 }
+
+@media (max-width: 920px) {
+  .contact-button {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-wrapper header svg {
+    width: 100px;
+  }
+}

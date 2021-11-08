@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
         <button
           onClick={event => {
             event.preventDefault()
-            if (themeMode == "light") {
+            if (themeMode === "light") {
               setThemeMode("dark")
               localStorage.setItem("theme", "dark")
             } else {
@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
             right: `1.0875rem`,
           }}
         >
-          {themeMode == "dark" ? (
+          {themeMode === "dark" ? (
             <svg
               aria-hidden="true"
               focusable="false"

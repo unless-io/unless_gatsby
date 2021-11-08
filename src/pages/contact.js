@@ -1,5 +1,5 @@
 import * as React from "react"
-import useIsMounted from "../hooks/use-is-mounted"
+import useIsMounted from "../hooks/use_is_mounted"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
