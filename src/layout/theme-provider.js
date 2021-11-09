@@ -8,7 +8,7 @@ export const ThemeContext = React.createContext({
 
 // Theme provider component with state
 const ThemeProvider = props => {
-  const clientSchemePreference = window
+  const clientSchemePreference = typeof window !== `undefined`
     ? window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "dark"
       : "light"
