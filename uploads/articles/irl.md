@@ -4,5 +4,4 @@ order: 2
 thumbnail: ../assets/irl.png
 ---
 
-A second scientific publication about CardioVR in the European Heart Journal Digital Health investigated by ErasmusMC heart surgeons. Different cases are thoroughly described where preoperative planning in VR was completed.
-
+IRL is a US-based social media platform striving to be the go-to place for information and community concerning groups and events. For this project Lars was part of the web-app team for several months. During this time he worked on a variety of features in the Vue/Nuxt application. Later he also worked on design, animation and icons for the IRL brand. Among which the landing page design.
