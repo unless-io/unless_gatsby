@@ -27,6 +27,7 @@ body {
   color: var(--foreground);
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
+  min-height: 100vh;
   transition: color 400ms ease, background-color 400ms ease;
 }
 

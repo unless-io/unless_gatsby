@@ -16,7 +16,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Seo title="About" />
+      <Seo title="Portfolio" />
       <div
         style={{
           marginBottom: `1.45rem`,

@@ -8,6 +8,20 @@ import Seo from "../components/seo"
 
 const IndexPage = () => {
   const isMounted = useIsMounted()
+
+  const getRotation = (event, target) => {
+    const x = event.pageX
+    const y = event.pageY
+
+    const targetX = target.getBoundingClientRect().left + target.offsetWidth / 2
+    const targetY = target.getBoundingClientRect().top + target.offsetHeight / 2
+
+    const angleX = (targetY - y) / 30
+    const angleY = (targetX - x) / 80
+
+    return `rotateX(${angleX}deg) rotateY(${angleY}deg)`
+  }
+
   const HandleMove = useCallback(event => {
     const target = document.querySelector("#banner")
     const width = target.offsetWidth + target.getBoundingClientRect().left * 2
@@ -20,12 +34,15 @@ const IndexPage = () => {
       values[Math.floor(horizontalPercentage * values.length)]
     const verticalOffset =
       values[Math.floor(verticalPercentage * values.length)]
-    target.style.boxShadow = `${horizontalOffset * -1}px ${
-      verticalOffset * -1
-    }px 5px rgba(1,1,1,0.3)`
+    target.style.boxShadow = `${horizontalOffset * -5}px ${
+      verticalOffset * -5
+    }px 25px rgba(1,1,1,0.2)`
     target.style.transform = `translateX(${
       horizontalOffset * -1
-    }px) translateY(${verticalOffset * -1}px) scale(1.03)`
+    }px) translateY(${verticalOffset * -1}px) scale(1.03) ${getRotation(
+      event,
+      target
+    )}`
   }, [])
 
   const handleClick = event => {
@@ -38,9 +55,11 @@ const IndexPage = () => {
       target.style.boxShadow = `0px 0px 0px rgba(0, 0, 0, 0)`
       target.style.transform = `translateX(0px) translateY(0px) scale(1)`
     } else {
-      target.classList.add("active")
-      target.style.transform = `translateX(0px) translateY(0px) scale(1.03)`
-      document.body.addEventListener("mousemove", HandleMove, true)
+      if (event.view.outerWidth > 900) {
+        target.classList.add("active")
+        target.style.transform = `translateX(0px) translateY(0px) scale(1.03)`
+        document.body.addEventListener("mousemove", HandleMove, true)
+      }
     }
   }
 
