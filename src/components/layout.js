@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
               localStorage.setItem("theme", "light")
             }
           }}
-          name="Color mode button"
+          aria-label="Color mode button"
           className="theme-button"
           style={{
             backgroundColor: "transparent",

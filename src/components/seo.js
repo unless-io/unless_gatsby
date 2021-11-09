@@ -76,11 +76,7 @@ function Seo({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    >
-      <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin/>
-      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&amp;display=swap" rel="stylesheet"/>
-    </Helmet>
+    />
   )
 }
 
