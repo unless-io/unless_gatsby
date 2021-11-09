@@ -8,11 +8,11 @@ export const ThemeContext = React.createContext({
 
 // Theme provider component with state
 const ThemeProvider = props => {
-  const clientSchemePreference = window.matchMedia(
-    "(prefers-color-scheme: dark)"
-  ).matches
-    ? "dark"
-    : "light"
+  const clientSchemePreference = window
+    ? window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light"
+    : undefined
   const localStorageTheme = localStorage.getItem("theme")
   const themePresent = localStorageTheme || clientSchemePreference
   const [themeMode, setThemeMode] = React.useState(themePresent)
