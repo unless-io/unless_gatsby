@@ -22,6 +22,11 @@
   transition: height 400ms ease, opacity 400ms ease;
 }
 
+.image-wrapper .content a,
+.image-wrapper .content a:visited {
+  color: #ffeddf;
+}
+
 .image-wrapper:after {
   content: "";
   background-color: transparent;
