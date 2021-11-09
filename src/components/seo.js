@@ -49,7 +49,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: (defaultTitle ? `${title} | ${defaultTitle}` : null),
         },
         {
           property: `og:description`,
