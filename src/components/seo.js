@@ -49,7 +49,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: (defaultTitle ? `${title} | ${defaultTitle}` : null),
+          content: defaultTitle ? `${title} | ${defaultTitle}` : null,
         },
         {
           property: `og:description`,
@@ -76,7 +76,13 @@ function Seo({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script
+        defer
+        data-domain="unless.io"
+        src="https://plausible.io/js/plausible.js"
+      ></script>
+    </Helmet>
   )
 }
 
