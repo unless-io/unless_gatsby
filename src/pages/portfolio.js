@@ -11,8 +11,10 @@ const IndexPage = () => {
   const isMounted = useIsMounted()
 
   const handleHighlight = event => {
-    event.preventDefault()
-    event.currentTarget.classList.toggle("active")
+    if (event.target.nodeName !== "A") {
+      event.preventDefault()
+      event.currentTarget.classList.toggle("active")
+    }
   }
 
   return (

@@ -6,7 +6,8 @@
   gap: 30px;
 }
 
-.image-wrapper .content > p {
+.image-wrapper .content > p,
+.image-wrapper .content > a {
   visibility: hidden;
   color: #ffeddf;
   height: 0px;
@@ -72,6 +73,7 @@
 }
 
 .image-wrapper.active .content > p,
+.image-wrapper.active .content > a,
 .image-wrapper.active .content > h2 {
   visibility: visible;
   opacity: 1;

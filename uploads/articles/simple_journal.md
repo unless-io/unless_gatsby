@@ -12,4 +12,6 @@ The main concept behind Simple Journal is keeping a streak. Log something every 
 Want to reinforce a habit? Like painting, for example? Save it as an activity on the platform, and start logging.
 Then review your progress over time in charts and calendars.
 
-Simple Journal was designed and developed in full by Unless, using Ruby on Rails. 
+Simple Journal was designed and developed in full by Unless, using Ruby on Rails.
+
+<a href="https://simplejournal.online/" target="_blank">www.simplejournal.online</a>
