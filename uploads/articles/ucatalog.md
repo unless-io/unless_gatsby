@@ -1,6 +1,6 @@
 ---
 title: uCatalog
-order: 4
+order: 5
 thumbnail: ../assets/ucatalog.png
 ---
 
