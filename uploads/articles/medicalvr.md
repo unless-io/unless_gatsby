@@ -1,6 +1,6 @@
 ---
 title: MedicalVR
-order: 4
+order: 6
 thumbnail: ../assets/medicalvr.png
 ---
 

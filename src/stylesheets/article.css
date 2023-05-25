@@ -1,0 +1,55 @@
+.content {
+  position: relative;
+}
+
+.badge:not(:empty) {
+  position: absolute;
+  background-color: var(--background);
+  height: 50px;
+  top: 0;
+  right: 0;
+  width: 50px;
+  z-index: 5;
+  padding: 10px;
+  border-bottom-left-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #979797;
+  border-right: none;
+  border-top: none;
+}
+
+.badge:not(:empty) svg {
+  filter: drop-shadow(0px 0px 6px rgba(1,1,1,0.4));
+  height: 40px;
+  margin-top: 5px;
+}
+
+.image-wrapper.active .badge {
+  display: none;
+}
+
+.light .badge .fa-primary,
+.light .badge .fa-secondary {
+  fill: #2050f7;
+}
+
+
+.dark .badge .fa-primary,
+.dark .badge .fa-secondary {
+  fill: #f8d053;
+}
+
+.image-wrapper .award {
+  display: none;
+}
+
+.image-wrapper.active .award {
+  display: block;
+  margin: 10px 0;
+}
+
+.image-wrapper.active .award .gatsby-image-wrapper {
+  max-width: 200px;
+}

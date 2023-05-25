@@ -1,6 +1,6 @@
 ---
 title: Bit
-order: 7
+order: 1
 thumbnail: ../assets/wearebit.png
 ---
 

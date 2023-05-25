@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Image from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import Badge from "../images/award-duotone.svg"
 
 import useIsMounted from "../hooks/use_is_mounted"
 import UseArticles from "../hooks/use_articles"
@@ -11,7 +12,7 @@ const IndexPage = () => {
   const isMounted = useIsMounted()
 
   const handleHighlight = event => {
-    if (event.target.nodeName !== "A") {
+    if (event.target.nodeName !== "A" && !event.target.closest('a')) {
       event.preventDefault()
       event.currentTarget.classList.toggle("active")
     }
@@ -34,7 +35,7 @@ const IndexPage = () => {
           {UseArticles()
             .sort((a, b) => {
               return a.order - b.order
-            })
+            }).reverse()
             .map((article, index) => (
               <button
                 className="image-wrapper"
@@ -42,6 +43,13 @@ const IndexPage = () => {
                 onClick={handleHighlight}
               >
                 <div className="content">
+                  {article.badge_image ?
+                    <div className={isMounted ? "badge slideIn" : "badge"}>
+                      <div className="badge-icon" aria-label="Nominated for an award!" data-balloon-pos="up">
+                        <Badge />
+                      </div>
+                    </div>
+                  : null }
                   <Image
                     fluid={
                       article.thumbnail
@@ -57,6 +65,30 @@ const IndexPage = () => {
                   />
                   <h2>{article.title}</h2>
                   <MDXRenderer>{article.body}</MDXRenderer>
+                  { article.badge_image ? 
+                    <>
+                      <div className="award">
+                        <h3>
+                          Nominated for:
+                        </h3>
+                        <a href={ article.badge_link } target="_blank" rel="noreferrer">
+                          <Image
+                            fluid={
+                              article.badge_image
+                              ? article.badge_image.childImageSharp.fluid
+                              : ""
+                            }
+                            className={isMounted ? "slideIn" : ""}
+                            imgStyle={{
+                              objectFit: "contain",
+                              boxSizing: "border-box",
+                              objectPosition: `left`,
+                            }}
+                          />
+                        </a>
+                      </div>
+                    </>
+                  : null }
                 </div>
               </button>
             ))}

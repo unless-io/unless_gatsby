@@ -1,6 +1,6 @@
 ---
 title: IRL web-team & design work
-order: 3
+order: 5
 thumbnail: ../assets/irl.png
 ---
 

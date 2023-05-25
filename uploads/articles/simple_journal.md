@@ -1,6 +1,6 @@
 ---
 title: Simple Journal
-order: 1
+order: 7
 thumbnail: ../assets/simple_journal.png
 ---
 

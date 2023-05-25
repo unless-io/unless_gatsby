@@ -74,11 +74,14 @@
 
 .image-wrapper.active .content > p,
 .image-wrapper.active .content > a,
-.image-wrapper.active .content > h2 {
+.image-wrapper.active .content > h2,
+.image-wrapper.active .content > .award,
+.image-wrapper.active .content h3 {
   visibility: visible;
   opacity: 1;
   height: fit-content;
   margin: revert;
+  display: block;
 }
 
 .image-wrapper .gatsby-image-wrapper {
@@ -93,7 +96,8 @@
   width: 80vw;
 }
 
-.image-wrapper .content h2 {
+.image-wrapper .content h2,
+.image-wrapper .content h3 {
   color: #ffeddf;
   text-align: left;
   font-size: 30px;

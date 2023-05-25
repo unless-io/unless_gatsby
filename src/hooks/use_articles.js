@@ -16,6 +16,14 @@ const UseArticles = () => {
                 }
               }
             }
+            badge_image {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            badge_link
           }
         }
       }
@@ -28,6 +36,8 @@ const UseArticles = () => {
     title: article.frontmatter.title,
     body: article.body,
     thumbnail: article.frontmatter.thumbnail,
+    badge_image: article.frontmatter.badge_image,
+    badge_link: article.frontmatter.badge_link,
   }))
 }
 

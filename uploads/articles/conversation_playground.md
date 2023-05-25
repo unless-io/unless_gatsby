@@ -1,6 +1,6 @@
 ---
 title: Conversation Playground
-order: 6
+order: 2
 thumbnail: ../assets/conversation_playground.png
 ---
 

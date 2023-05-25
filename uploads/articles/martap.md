@@ -1,6 +1,6 @@
 ---
 title: Martap Solutions
-order: 6
+order: 3
 thumbnail: ../assets/martap.png
 ---
 
